@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="songs">
+        <item>年龄</item>
+        <item>18岁-21岁</item>
+        <item>22岁-25岁</item>
+        <item>26岁-30岁</item>
+        <item>31岁-35岁</item>
+        <item>36岁-40岁</item>
+    </string-array>
+
+</resources>

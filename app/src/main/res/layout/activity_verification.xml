@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/loginbag"
+    tools:context="com.zmx.angelababy.ui.LoginActivity">
+
+    <include layout="@layout/layout_title"></include>
+
+
+    <LinearLayout
+        android:id="@+id/verification_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:visibility="gone"
+        android:layout_below="@+id/linearLayout"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#0f86ff"
+            android:textSize="16sp"
+            android:text="验证短信已发送到您的手机："
+            />
+        <TextView
+            android:id="@+id/verification_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#f7c11f"
+            android:layout_marginTop="10dp"
+            android:textSize="16sp"
+            android:text="13751729147"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#0f86ff"
+            android:layout_marginTop="10dp"
+            android:textSize="16sp"
+            android:text="请把验证码填写到输入框内"
+            />
+
+
+
+        <EditText
+            android:id="@+id/verification_code"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="验证码"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:textColor="#0f86ff"
+            android:textColorHint="#0f86ff"
+            android:background="@drawable/editsharp"
+            />
+
+        <Button
+            android:id="@+id/again_get"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/buttonstyle_a"
+            android:text="重新获取"
+            android:textColor="#0f86ff"
+            />
+
+        <Button
+            android:id="@+id/submit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/buttonstyle"
+            android:text="提交"
+            android:textColor="#ffffff"
+            />
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/login_load"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dip"
+        android:indeterminateDrawable="@drawable/animdraw2"
+        android:indeterminateDuration="1500"
+        />
+
+</RelativeLayout>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="330dp">
+
+        <com.zmx.angelababy.utils.view.XCRoundRectImageView
+            android:id="@+id/image"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:scaleType="fitXY"
+            />
+
+        <!--<ImageView-->
+            <!--android:layout_width="50dp"-->
+            <!--android:layout_height="50dp"-->
+            <!--android:layout_marginTop="275dp"-->
+            <!--android:background="@mipmap/video"-->
+            <!--android:layout_centerHorizontal="true"-->
+            <!--/>-->
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:id="@+id/main_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="夏卍初™秋♐冷"
+        android:layout_marginTop="20dp"
+        android:textColor="#f7c11f"
+        />
+
+    <TextView
+        android:id="@+id/desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="或南或北，岁月不及你，森崎"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:textColor="#8f1ff7"
+        />
+
+    <TextView
+        android:id="@+id/message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="职业：学生     年龄：21岁"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:textColor="#f7c11f"
+        />
+
+    <Button
+        android:id="@+id/chat_button"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="22dp"
+        android:layout_marginRight="22dp"
+        android:background="@drawable/buttonstyle"
+        android:text="和她聊天"
+        />
+    </LinearLayout>
+
+</LinearLayout>

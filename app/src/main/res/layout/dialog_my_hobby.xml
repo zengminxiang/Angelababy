@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#2A0052"
+        android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/choice_delect"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="我的爱好"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:textColor="#f7c11f"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="10dp"
+        android:padding="10dp"
+        >
+
+        <TextView
+            android:id="@+id/age_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/layout_style_a"
+            android:drawableRight="@mipmap/icon_down"
+            android:padding="10dp"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:textColor="@color/bage"
+            android:gravity="center"
+            android:text="年龄"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:id="@+id/occupation_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/layout_style_a"
+            android:drawableRight="@mipmap/icon_down"
+            android:padding="10dp"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:layout_marginRight="5dp"
+            android:textColor="@color/bage"
+            android:gravity="center"
+            android:text="职业"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:id="@+id/evaluate_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/layout_style_a"
+            android:drawableRight="@mipmap/icon_down"
+            android:padding="10dp"
+            android:textColor="@color/bage"
+            android:gravity="center"
+            android:text="评价"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:textSize="16sp"/>
+    </LinearLayout>
+    </LinearLayout>
+
+   </RelativeLayout>

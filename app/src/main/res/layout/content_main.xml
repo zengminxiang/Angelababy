@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1E083F"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.zmx.angelababy.MainActivity"
+    tools:showIn="@layout/app_bar_main">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:paddingEnd="48dp"
+        android:paddingLeft="48dp"
+        android:paddingRight="48dp"
+        android:paddingStart="48dp">
+        </android.support.v4.view.ViewPager>
+
+   <RelativeLayout
+       android:id="@+id/error_layout"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:gravity="center"
+       android:visibility="gone"
+       >
+
+       <TextView
+           android:id="@+id/text_tishi"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:gravity="center"
+           android:text="数据加载失败......"
+           android:textSize="18sp"
+           android:textColor="#f7c11f"
+           />
+
+       <Button
+           android:id="@+id/load_button"
+           android:layout_below="@+id/text_tishi"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:text="重新加载"
+           android:layout_marginTop="10dp"
+           android:layout_marginRight="10dp"
+           android:layout_marginLeft="10dp"
+           android:background="@drawable/buttonstyle"
+           />
+
+
+   </RelativeLayout>
+
+    <!--2. 底部的三个图标按钮-->
+
+    <RelativeLayout
+        android:id="@+id/bottom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_alignParentBottom="true">
+
+        <TextView
+            android:id="@+id/my_hobby"
+            android:layout_width="70dp"
+            android:layout_height="38dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:gravity="center"
+            android:text="我的爱好"
+            android:textColor="#f7c11f" />
+
+        <TextView
+            android:layout_width="70dp"
+            android:layout_height="38dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:gravity="center"
+            android:text="送个朋友"
+            android:textColor="#f7c11f" />
+
+    </RelativeLayout>
+
+
+    <ProgressBar
+        android:id="@+id/login_load"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dip"
+        android:indeterminateDrawable="@drawable/animdraw2"
+        android:indeterminateDuration="1500"
+        />
+
+
+</RelativeLayout>

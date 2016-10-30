@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1E083F"
+    android:orientation="vertical"
+
+    tools:context="com.zmx.angelababy.ui.MyWalletActivity">
+
+    <include layout="@layout/layout_title"></include>
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:textColor="#f7c11f"
+        android:textSize="18sp"
+        android:text="您已购买了“****”提供的2分钟电话聊天互动服务。 “****”会在2016-10-21 21:30 拨打您的电话，请准备好"
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/content_color"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        ></View>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:textColor="#f7c11f"
+        android:textSize="18sp"
+        android:text="您已购买了“****”提供的2分钟电话聊天互动服务。 “****”会在2016-10-21 21:30 拨打您的电话，请准备好"
+        />
+
+</LinearLayout>

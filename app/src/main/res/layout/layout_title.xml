@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <!--4. 顶部的titleBar-->
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!--沉浸式activity，这个view是用来占位的-->
+
+        <View
+            android:id="@+id/position_view"
+            android:layout_width="20px"
+            android:layout_height="20px" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="100px"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/close"
+                android:layout_width="30px"
+                android:layout_height="30px"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:background="@mipmap/close" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="我的预约"
+                android:textColor="#f7c11f"
+                android:textSize="20sp" />
+
+            <View
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp" />
+
+            <TextView
+                android:id="@+id/message"
+                android:layout_width="40px"
+                android:layout_height="36px"
+                android:visibility="gone"
+                android:background="@mipmap/message"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="20px"
+                android:layout_alignParentRight="true"
+                
+                />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
