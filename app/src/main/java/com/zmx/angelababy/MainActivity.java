@@ -42,6 +42,7 @@ import com.zmx.angelababy.ui.MyAppointmentActivity;
 import com.zmx.angelababy.ui.MyWalletActivity;
 import com.zmx.angelababy.ui.SetupActivity;
 import com.zmx.angelababy.utils.view.CustPagerTransformer;
+import com.zmx.angelababy.utils.view.DepthPageTransformer;
 import com.zmx.angelababy.utils.view.ImageViewUtil;
 import com.zmx.angelababy.utils.view.PopupWindowHelper;
 
@@ -61,6 +62,8 @@ public class MainActivity extends AppCompatActivity
     private List<MainFragment> fragments = new ArrayList<>(); // 供ViewPager使用
     private List<GirlMessageBean> gmbs = new ArrayList<>();
     private MainFragmentPagerAdapter adapter;
+    private MainFragment mainFragment;
+
 
     private NavigationView navigationView;//左侧布局
     private View headerLayout;//左侧头部
@@ -217,11 +220,13 @@ public class MainActivity extends AppCompatActivity
             }
 
 
-        }else if (id == R.id.nav_service) {
-
-            Toast.makeText(this,"等待接口开放",Toast.LENGTH_LONG).show();
-
-        } else if (id == R.id.nav_send) {
+        }
+//        else if (id == R.id.nav_service) {
+//
+//            Toast.makeText(this,"等待接口开放",Toast.LENGTH_LONG).show();
+//
+//        }
+        else if (id == R.id.nav_send) {
 
             SharePreferenceUtil.getInstance(this).clear();
 
@@ -247,6 +252,7 @@ public class MainActivity extends AppCompatActivity
                     if(adapter == null){
 
                         // 1. viewPager添加parallax效果，使用PageTransformer就足够了
+//                        viewPager.setPageTransformer(true, new DepthPageTransformer());
                         viewPager.setPageTransformer(false, new CustPagerTransformer(MainActivity.this));
                         viewPager.setOffscreenPageLimit(fragments.size());//卡片数量
                         viewPager.setPageMargin(-20);//两个卡片之间的距离，单位dp
@@ -255,6 +261,25 @@ public class MainActivity extends AppCompatActivity
                         }
 
                         adapter = new MainFragmentPagerAdapter(getSupportFragmentManager(), fragments,gmbs);
+
+                        viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+                            @Override
+                            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+
+                            }
+
+                            @Override
+                            public void onPageSelected(int position) {
+
+
+                            }
+
+                            @Override
+                            public void onPageScrollStateChanged(int state) {
+
+                            }
+                        });
+
                         viewPager.setAdapter(adapter);
 
                     }else{

@@ -32,6 +32,10 @@ public class MainPresenter {
 
     }
 
+    public MainPresenter(Context context){
+        this.context = context;
+    }
+
     public void getGrilMessageList(String begin, String plen) {
 
         Log.e("getGrilMessageList", "进来了");
@@ -74,6 +78,19 @@ public class MainPresenter {
                     }
 
                 }
+            }
+        });
+
+    }
+
+    public void TelePhone(String from_phone, String to_phone, String talk_time){
+
+        model.TelePhone(from_phone, to_phone, talk_time, new IDataRequestListener() {
+            @Override
+            public void loadSuccess(Object object) {
+
+                Log.e("拨打电话","拨打："+object);
+
             }
         });
 

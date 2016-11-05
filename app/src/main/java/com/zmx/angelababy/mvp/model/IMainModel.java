@@ -12,4 +12,6 @@ public interface IMainModel {
      */
     void IGetGirlMessage(String begin,String plen,IDataRequestListener listener);
 
+    void ITelePhone(String from_phone,String to_phone,String talk_time,IDataRequestListener listener);
+
 }

@@ -3,6 +3,7 @@ package com.zmx.angelababy.fragment;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,6 +19,7 @@ import com.nostra13.universalimageloader.core.display.RoundedBitmapDisplayer;
 import com.zmx.angelababy.BaseFragment;
 import com.zmx.angelababy.R;
 import com.zmx.angelababy.mvp.bean.GirlMessageBean;
+import com.zmx.angelababy.mvp.presenter.MainPresenter;
 import com.zmx.angelababy.ui.LoginActivity;
 import com.zmx.angelababy.ui.PaymentActivity;
 import com.zmx.angelababy.utils.view.XCRoundRectImageView;
@@ -35,6 +37,8 @@ public class MainFragment extends BaseFragment implements View.OnClickListener{
     private TextView name,desc,message;
     private LinearLayout main_layout;
 
+    private MainPresenter mp;
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -47,6 +51,7 @@ public class MainFragment extends BaseFragment implements View.OnClickListener{
     @Override
     protected void initView() {
 
+        mp = new MainPresenter(this.getActivity());
         chat_button = (Button) findViewById(R.id.chat_button);
         chat_button.setOnClickListener(this);
         main_layout = (LinearLayout) findViewById(R.id.main_layout);
@@ -69,15 +74,16 @@ public class MainFragment extends BaseFragment implements View.OnClickListener{
         switch (v.getId()){
 
             case R.id.chat_button:
-                Intent intent = new Intent(this.getActivity(), PaymentActivity.class);
-                intent.putExtra("girl",girl);
-                startActivity(intent);
+
+                mp.TelePhone("13751729147","15914502324","60");
+//                Intent intent = new Intent(this.getActivity(), PaymentActivity.class);
+//                intent.putExtra("girl",girl);
+//                startActivity(intent);
                 break;
 
         }
 
     }
-
 
     public void DataGirlMessage(GirlMessageBean girl){
 
@@ -85,5 +91,30 @@ public class MainFragment extends BaseFragment implements View.OnClickListener{
 
     }
 
+    public void setLayoutGone(){
+
+        main_layout.setVisibility(View.GONE);
+
+    }
+    public void setLayoutVisible(){
+
+        main_layout.setVisibility(View.VISIBLE);
+
+    }
+
+    @Override
+    public void onResume() {
+
+        Log.e("111111","111111");
+        setLayoutVisible();
+        super.onResume();
+    }
+
+    @Override
+    public void onStop() {
+        setLayoutGone();
+        Log.e("222222","2222222");
+        super.onStop();
+    }
 
 }

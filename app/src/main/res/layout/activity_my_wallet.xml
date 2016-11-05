@@ -34,45 +34,51 @@
             />
 
     </RelativeLayout>
-
-    <RelativeLayout
+    
+    <ImageView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        >
+        android:layout_height="500px"
+        android:src="@mipmap/background"
+        />
 
-        <TextView
-            android:id="@+id/wallet_money"
-            android:layout_width="wrap_content"
-            android:layout_height="100px"
-            android:textSize="30sp"
-            android:text="215.02"
-            android:layout_centerHorizontal="true"
-            android:textColor="#f7c11f" />
+    <!--<RelativeLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:gravity="center"-->
+        <!--&gt;-->
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="60px"
-            android:gravity="bottom"
-            android:layout_toRightOf="@+id/wallet_money"
-            android:textColor="#f7c11f"
-            android:text="元"
-            />
+        <!--<TextView-->
+            <!--android:id="@+id/wallet_money"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="100px"-->
+            <!--android:textSize="30sp"-->
+            <!--android:text="215.02"-->
+            <!--android:layout_centerHorizontal="true"-->
+            <!--android:textColor="#f7c11f" />-->
 
-
-        <Button
-            android:layout_below="@+id/wallet_money"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="40px"
-            android:layout_marginLeft="40px"
-            android:layout_marginTop="60px"
-            android:background="@drawable/buttonstyle_a"
-            android:text="提现"
-            android:textColor="#0f86ff"
-            />
+        <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="60px"-->
+            <!--android:gravity="bottom"-->
+            <!--android:layout_toRightOf="@+id/wallet_money"-->
+            <!--android:textColor="#f7c11f"-->
+            <!--android:text="元"-->
+            <!--/>-->
 
 
-    </RelativeLayout>
+        <!--<Button-->
+            <!--android:layout_below="@+id/wallet_money"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginRight="40px"-->
+            <!--android:layout_marginLeft="40px"-->
+            <!--android:layout_marginTop="60px"-->
+            <!--android:background="@drawable/buttonstyle_a"-->
+            <!--android:text="提现"-->
+            <!--android:textColor="#0f86ff"-->
+            <!--/>-->
+
+
+    <!--</RelativeLayout>-->
 
 </LinearLayout>

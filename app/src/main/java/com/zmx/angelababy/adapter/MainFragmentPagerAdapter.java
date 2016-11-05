@@ -3,6 +3,7 @@ package com.zmx.angelababy.adapter;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v4.app.FragmentStatePagerAdapter;
 import android.util.Log;
 import android.view.ViewGroup;
 
@@ -16,7 +17,7 @@ import java.util.List;
  *时间：2016/10/21 0021 下午 4:46
  *功能模块：viewPager滑动适配器
  */
-public class MainFragmentPagerAdapter extends FragmentPagerAdapter{
+public class MainFragmentPagerAdapter extends FragmentStatePagerAdapter {
 
     private List<MainFragment> lists;
     private List<GirlMessageBean> gmbs;
@@ -59,9 +60,5 @@ public class MainFragmentPagerAdapter extends FragmentPagerAdapter{
         super.setPrimaryItem(container, position, object);
     }
 
-
-    public MainFragment getCurrentFragment() {
-        return mainFragment;
-    }
 
 }

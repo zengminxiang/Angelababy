@@ -251,13 +251,14 @@ public class VerificationActivithy extends BaseActivity implements RegisterView{
 
         loading.setVisibility(View.GONE);
 
-        if(success && !uid.equals("")){
+        if(success){
 
             Toast.makeText(this,"注册成功,请登录",Toast.LENGTH_LONG).show();
             this.finish();
 
         }else{
-            Toast.makeText(this,"注册失败！",Toast.LENGTH_LONG).show();
+
+            Toast.makeText(this,uid,Toast.LENGTH_LONG).show();
         }
 
     }

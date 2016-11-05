@@ -42,6 +42,26 @@ public class UserPresenter {
             public void loadSuccess(Object object) {
 
                 Log.e("返回结果：","返回结果："+object.toString());
+//                {"ret":true,"msg":"注册成功","uid":1019}
+
+                try {
+
+                    JSONObject jsonObject = new JSONObject(object.toString());
+
+                    if(jsonObject.getBoolean("ret")){
+
+                        rv.Register(jsonObject.getBoolean("ret"),jsonObject.getString("uid"));
+
+                    }else {
+
+                        rv.Register(jsonObject.getBoolean("ret"),jsonObject.getString("msg"));
+
+                    }
+
+
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
 
             }
         });
@@ -55,7 +75,6 @@ public class UserPresenter {
             public void loadSuccess(Object object) {
 
                 try {
-//                    {"ret":false,"msg":"密码不正确"}
                     Log.e("Object","object"+object.toString());
 
                     JSONObject jsonObject = new JSONObject(object.toString());
