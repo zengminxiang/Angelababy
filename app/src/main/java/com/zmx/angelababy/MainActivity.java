@@ -52,7 +52,7 @@ import java.util.List;
  *
  * 开发者：胖胖祥
  * 时间：2016/10/28 19:48
- * 功能模块：主界面
+ * 功能模块：主界面 重新部署
  *
  */
 public class MainActivity extends AppCompatActivity
